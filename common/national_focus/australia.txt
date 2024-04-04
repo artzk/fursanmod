@@ -1,0 +1,219 @@
+﻿focus_tree = {
+	id = australian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = AST
+		}
+	}
+	
+	focus = {
+		id = AST_The_August_Coup
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 3
+		y = 0
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		date>1936.7.31
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {}
+
+		completion_reward = {
+			add_popularity = {
+			 ideology = fascism
+			 popularity = 0.4
+			}
+			set_politics = {
+			 ruling_party = fascism
+			 elections_allowed = no
+			}
+			add_ideas = {
+				AST_Council_Crisis
+			}
+			add_autonomy_score = {
+				value = 250
+			}
+		}
+	}
+	focus = {
+		id = AST_Form_A_Fascist_Council
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 3
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = { focus = AST_The_August_Coup }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {}
+
+		completion_reward = {
+		set_party_name = {
+			ideology = fascism
+			long_name = AST_The_Dual_Council_Long
+			name = AST_Dual_Council
+			}
+		add_autonomy_score = {
+			value = 325
+		}
+		}
+	}
+	focus = {
+		id = AST_Continue_The_Council_Rule
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 3
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = { focus = AST_Form_A_Fascist_Council }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {}
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = AST_Expand_The_NAAC
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 9
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = {}
+
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = AST_Expand_The_NAAC
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = AST_Australian_Artillery_Corps
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 9	
+		y = 9
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = { focus = AST_Expand_The_NAAC }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {}
+
+		completion_reward = {
+				army_experience = 5
+				add_tech_bonus = {
+					name = assembly_bonus
+					bonus = 0.25
+					uses = 1
+					category = artillery
+				}
+		}
+	}
+	focus = {
+		id = AST_New_Draft
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 9	
+		y = 10
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = { focus = AST_Australian_Artillery_Corps }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {}
+
+		completion_reward = {
+		
+		}
+	}
+}
+
