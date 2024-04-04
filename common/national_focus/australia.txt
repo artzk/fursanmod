@@ -55,9 +55,9 @@
 	focus = {
 		id = AST_Form_A_Fascist_Council
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 3
+		x = 0
 		y = 1
-
+		relative_position_id = AST_The_August_Coup
 		cost = 10
 
 		ai_will_do = {
@@ -91,8 +91,9 @@
 	focus = {
 		id = AST_Continue_The_Council_Rule
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 3
-		y = 2
+		x = 0
+		y = 1
+		relative_position_id = AST_Form_A_Fascist_Council
 
 		cost = 5
 
@@ -156,9 +157,9 @@
 	focus = {
 		id = AST_Australian_Artillery_Corps
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 9	
-		y = 9
-
+		x = 0
+		y = 1
+		relative_position_id = AST_Expand_The_NAAC
 		cost = 5
 
 		ai_will_do = {
@@ -190,6 +191,36 @@
 	focus = {
 		id = AST_New_Draft
 		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		relative_position_id = AST_Australian_Artillery_Corps
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		prerequisite = { focus = AST_Australian_Artillery_Corps }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {}
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = AST_New_Draft
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 9	
 		y = 10
 
@@ -215,5 +246,8 @@
 		
 		}
 	}
+
+
+
 }
 
